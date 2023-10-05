@@ -1,0 +1,41 @@
+version: 2
+sources:
+  - name: abc_bank
+    database: PORTFOLIO_TRACKING
+    schema: SOURCE_DATA
+    tables:
+      - name: ABC_BANK_POSITION
+        columns:
+          - name: ACCOUNTID
+            tests:
+              - not_null
+          - name: SYMBOL
+            tests:
+              - unique
+              - not_null
+          - name: DESCRIPTION
+            tests:
+              - not_null
+          - name: EXCHANGE
+            tests:
+              - not_null
+          - name: REPORT_DATE
+            tests:
+              - not_null
+          - name: QUANTITY
+            tests:
+              - not_null
+          - name: COST_BASE
+            tests:
+              - not_null
+          - name: POSITION_VALUE
+            tests:
+              - not_null
+          - name: CURRENCY
+            tests:
+              - not_null
+              
+              
+              
+
+              
